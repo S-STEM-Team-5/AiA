@@ -6,32 +6,34 @@ import {
     ActivityIndicator,
     StyleSheet
 } from 'react-native';
-
+import abstractViewClass from './abstractViewClass';
+// Components
 import TresorLogo from '../components/tresorLogo';
-import ViewTasks from '../components/taskList';
-import { AppNavigator } from "/home/kamto/GitHub/myProjects/other/SMART-TODO/task-app/routes/AppNavigator.js";
 
-export default class LoadingApp extends React.Component {
+
+class LoadingApp extends abstractViewClass {
     constructor(){
         super();
+        this._loadContent();
     }
+
+    _loadContent = async () => {
+        const content = await new Promise((resolve, reject) => {
+            // Just an example, in reality we would load objs/res
+            setTimeout( () =>{resolve(true)}, 5000)
+        })
+        // References AuthNavigator
+        this.props.navigation.navigate( content ? 'Main' : 'Init')
+    };
     
     render(){            
             return (
                 <View>
                 <TresorLogo />
                 <ActivityIndicator size='large' color="black" />
-                {/* <Button title="Enter the Void" onPress={ () => {nextState}} /> */}
             </View>
         );
     }
 }
 
-const styles = StyleSheet.create({
-    image: {
-        // textAlign: 'center',
-        // padding: "30",
-        // width: "80",
-        // height: "200"
-    }
-})
+export default LoadingApp;
