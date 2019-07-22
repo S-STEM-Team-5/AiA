@@ -5,20 +5,26 @@ import {
     StyleSheet
 } from 'react-native';
 
-export default function tresorLogo() {
-    return(
-        <Image style={css.image} source={img} />
-    )
-}
 
+
+export default class tresorLogo extends React.Component {
+    render() {
+        return(
+            <Image source={img} />
+            )
+    }
+}
 const css = StyleSheet.create({
     image: {
         flex: 1,
-        padding: 30,
-        width: "20%",
-        height: "70%",
-        
+        justifyContent: "center",
+        alignContent: "center",
+        width: "10%",
+        height: "60%",
+        opacity: "0"
     }
+
 })
 
 const img = require('../assets/tresor-xi.png')
+

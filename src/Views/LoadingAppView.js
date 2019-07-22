@@ -24,21 +24,19 @@ export default class LoadingApp extends React.Component {
         render(){
             return (
                 <View>
-                <TresorLogo style={ styles.container } />
-                <Text>Welcome to Tresor</Text>
-                {/* <ActivityIndicator size='large' color="green" /> */}
+                <TresorLogo style={styles.image} />
+                <Button text='Enter the Void ' onPress={ () => {alert("Welcome to the APP")}} />
+                <ActivityIndicator size='large' color="green" />
             </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
     image: {
-        textAlign: "center",
-        width: "54%",
-        height: "67%"
+        textAlign: 'auto',
+        padding: "30",
+        width: "80",
+        height: "200"
     }
 })
