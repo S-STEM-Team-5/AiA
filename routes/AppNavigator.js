@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { createStackNavigator } from 'react-navigation'
-import { AllDoneView } from '../src/Views/AllDoneView';
+import AllDoneView from '../src/Views/AllDoneView';
 import ViewTasksView  from '../src/Views/ViewTasksView';
-// import AddTaskView from '../src/Views/AddTaskView';
+import AddTaskView from '../src/Views/AddTaskView';
 
 const AppNavigator = createStackNavigator({
     Main: {screen: ViewTasksView },
-    // AddTask: { screen: AddTaskView },
-    // AllDone: { screen: AllDoneView }
+    AddTask: { screen: AddTaskView },
+    AllDone: { screen: AllDoneView }
 },
 {
     initialRouteName: "Main"

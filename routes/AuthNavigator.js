@@ -7,12 +7,13 @@ import LoadingAppView from '../src/Views/LoadingAppView'
 
 // import MainApp from './AppNavigator'
 
-import MainApp from '../src/Views/ViewTasksView'
+import AppNavigator from './AppNavigator';
 // Only for Authentication / Loading Screen
 
 const authFlow = createSwitchNavigator({
-    Init: { screen: LoadingAppView }, //This is the 'loading' screen
-    Main: {screen: MainApp } //Segways into the MainApp
+    Init: LoadingAppView, //This is the 'loading' screen
+    // Auth: AuthNavigator,  //For login screens
+    Main: AppNavigator //Segways into the MainApp
 }, {
     initialRouteName: 'Init'
 })
