@@ -1,21 +1,33 @@
+// Entry Point -- everything starts from here!
+
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import LoadingApp from './src/Views/LoadingApp';
+import LoadingAppView from './src/Views/LoadingAppView';
+import AppNavigator from './routes/AppNavigator';
+import AuthNavigator from './routes/AuthNavigator';
+import { createAppContainer } from 'react-navigation';
+// import gs from './src/components/StyleSheet';
 
 export default function App() {
+// Any navigation must be placed in AppContainer
+  const InitApp = createAppContainer(AuthNavigator);
+
   return (
     <View style={styles.container}>
-      <LoadingApp />
+      {/* Authenticates user (login) */}
+      <InitApp />
     </View>
   );
 }
 
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#551A8B',
     alignContent: "flex-end",
-    // justifyContent: "space-evenly"
+    justifyContent: "center"
     
   },
 });
