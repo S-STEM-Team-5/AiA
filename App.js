@@ -6,10 +6,12 @@ import LoadingAppView from './src/Views/LoadingAppView';
 import AppNavigator from './routes/AppNavigator';
 import AuthNavigator from './routes/AuthNavigator';
 import { createAppContainer } from 'react-navigation';
+
 // import gs from './src/components/StyleSheet';
 
 export default function App() {
-// Any navigation must be placed in AppContainer
+
+// Any navigation must be placed in the `createAppContainer method
   const InitApp = createAppContainer(AuthNavigator);
 
   return (
@@ -25,7 +27,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#551A8B',
+    // backgroundColor: '#551A8B',
     alignContent: "flex-end",
     justifyContent: "center"
     

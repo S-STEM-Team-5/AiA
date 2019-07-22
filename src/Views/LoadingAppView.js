@@ -9,24 +9,19 @@ import {
 
 import TresorLogo from '../components/tresorLogo';
 import ViewTasks from '../components/taskList';
+import { AppNavigator } from "/home/kamto/GitHub/myProjects/other/SMART-TODO/task-app/routes/AppNavigator.js";
 
 export default class LoadingApp extends React.Component {
     constructor(){
         super();
     }
     
-    // async loadResources() {
-        //     // Loads up Apps Resources
-        //     items = await require('../assets/tresor-xi.png') //Loads asset files
-        //     nav.navigate(items ? 'MainApp' : 'AllDone')
-        // }
-        
-        render(){
+    render(){            
             return (
                 <View>
-                <TresorLogo style={styles.image} />
-                <Button text='Enter the Void ' onPress={ () => {alert("Welcome to the APP")}} />
-                <ActivityIndicator size='large' color="green" />
+                <TresorLogo />
+                <ActivityIndicator size='large' color="black" />
+                {/* <Button title="Enter the Void" onPress={ () => {nextState}} /> */}
             </View>
         );
     }
@@ -34,9 +29,9 @@ export default class LoadingApp extends React.Component {
 
 const styles = StyleSheet.create({
     image: {
-        textAlign: 'auto',
-        padding: "30",
-        width: "80",
-        height: "200"
+        // textAlign: 'center',
+        // padding: "30",
+        // width: "80",
+        // height: "200"
     }
 })
