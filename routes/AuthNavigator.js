@@ -5,7 +5,9 @@ import {
 
 import LoadingAppView from '../src/Views/LoadingAppView'
 
-import MainApp from './AppNavigator'
+// import MainApp from './AppNavigator'
+
+import MainApp from '../src/Views/ViewTasksView'
 // Only for Authentication / Loading Screen
 
 const authFlow = createSwitchNavigator({

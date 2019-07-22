@@ -4,7 +4,7 @@ import { AllDoneView } from '../src/Views/AllDoneView';
 import ViewTasksView  from '../src/Views/ViewTasksView';
 // import AddTaskView from '../src/Views/AddTaskView';
 
-const AppStack = createStackNavigator({
+const AppNavigator = createStackNavigator({
     Main: {screen: ViewTasksView },
     // AddTask: { screen: AddTaskView },
     // AllDone: { screen: AllDoneView }
@@ -15,4 +15,4 @@ const AppStack = createStackNavigator({
 
 
 // Exposes Routing to the app
-export default AppStack;
+export default AppNavigator;
