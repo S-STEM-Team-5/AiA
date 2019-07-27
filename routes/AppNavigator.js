@@ -10,7 +10,18 @@ const AppNavigator = createStackNavigator({
     AllDone: { screen: AllDoneView }
 },
 {
-    initialRouteName: "Main"
+    initialRouteName: "Main",
+    
+    // Global
+    defaultNavigationOptions: {
+    headerStyle: {
+        backgroundColor: "#0057e7",  
+        textAlign: "center"  
+        },
+    headerTitleStyle: {
+        fontWeight: 'bold',
+        }
+    }
 })
 
 

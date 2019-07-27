@@ -9,11 +9,10 @@ import { createAppContainer } from 'react-navigation';
 
 // import gs from './src/components/StyleSheet';
 
-export default function App() {
-
 // Any navigation must be placed in the `createAppContainer method
-  const InitApp = createAppContainer(AuthNavigator);
+const InitApp = createAppContainer(AuthNavigator);
 
+export default function App() {
   return (
     <View style={styles.container}>
       {/* Authenticates user (login) */}
